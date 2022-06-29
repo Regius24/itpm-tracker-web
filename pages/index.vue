@@ -1,24 +1,30 @@
 <template>
-  <div class="hero min-h-screen bg-base-200">
+  <div
+    class="h-screen w-screen grid place-items-center bg-center bg-cover overflow-auto my-lg"
+    style="background-image: url('../assets/bars-light.jpg');"
+  >
+    <div class="card lg:card-side shadow-xl  backdrop-blur-3xl">
+      <figure style="width: 100%;">
+        <img
+          src="~/assets/undraw_performance_overview.svg"
+          alt="perf_over"
+        >
+      </figure>
 
-    <div class="hero-content flex-col md:flex-row-reverse">
-      <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-bold">Login now!</h1>
-        <p class="py-6">
-          CX IT Portfolio Management (IT-PM) Tracker, a single repository of information of all projects with Aurora
-          wave initiated by Customer Experience (CX) Group. {{ model.uname }} {{ model.pword }} {{ count }}
-        </p>
-      </div>
+      <div class="card-body max-w-sm backdrop-sepia-0 bg-black/10 mx-auto">
+        <div class="text-white">
+          <h2 class="card-title">LOGIN HERE!</h2>
+          <p>If a dog chews shoes whose shoes does he choose? {{ model }}</p>
+        </div>
 
-      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-        <div class="card-body">
+        <form class="form-control my-5">
           <div class="form-control">
             <label class="label">
-              <span class="label-text">Username</span>
+              <span class="label-text text-gray-300">What is your domain?</span>
             </label>
             <input
               type="text"
-              placeholder="username"
+              placeholder="Type here"
               class="input input-bordered"
               v-model="model.uname"
             />
@@ -26,22 +32,19 @@
 
           <div class="form-control">
             <label class="label">
-              <span class="label-text">Password</span>
+              <span class="label-text text-gray-300">What is your domain?</span>
             </label>
             <input
-              type="text"
-              placeholder="password"
+              :type="showPassword ? 'text' : 'password'"
+              placeholder="Type here"
               class="input input-bordered"
               v-model="model.pword"
             />
           </div>
+        </form>
 
-          <div class="form-control mt-6">
-            <button
-              class="btn btn-primary"
-              @click="counterBtn"
-            >Login</button>
-          </div>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Sign In</button>
         </div>
       </div>
     </div>
@@ -53,6 +56,8 @@ const model = ref({
   uname: '',
   pword: ''
 })
+const showPassword = ref(false)
+
 const count = ref(0)
 const counterBtn = () => count.value++
 </script>
