@@ -1,20 +1,13 @@
 <template>
   <div
     class="h-screen w-screen grid place-items-center bg-center bg-cover overflow-auto my-lg"
-    style="background-image: url('../assets/bars-light.jpg');"
+    style="background-image: url('/space-gradient.jpg');"
   >
-    <div class="card lg:card-side shadow-xl  backdrop-blur-3xl">
-      <figure style="width: 100%;">
-        <img
-          src="~/assets/undraw_performance_overview.svg"
-          alt="perf_over"
-        >
-      </figure>
-
-      <div class="card-body max-w-sm backdrop-sepia-0 bg-black/10 mx-auto">
+    <div class="card lg:card-side drop-shadow-2xl bg-gradient-to-r from-purple-800 via-purple-600 to-indigo-500">
+      <div class="card-body max-w-sm mx-auto">
         <div class="text-white">
-          <h2 class="card-title">LOGIN HERE!</h2>
-          <p>If a dog chews shoes whose shoes does he choose? {{ model }}</p>
+          <h2 class="card-title">IT-PM Tracker</h2>
+          <p class="text-gray-300">Welcome, login your credentials below: {{ count }}</p>
         </div>
 
         <form class="form-control my-5">
@@ -26,6 +19,7 @@
               type="text"
               placeholder="Type here"
               class="input input-bordered"
+              :class="model.uname.length < 5 ? 'input-error' : ''"
               v-model="model.uname"
             />
           </div>
@@ -44,7 +38,10 @@
         </form>
 
         <div class="card-actions justify-end">
-          <button class="btn btn-primary">Sign In</button>
+          <button
+            class="btn btn-primary"
+            @click="counterBtn"
+          >Sign In</button>
         </div>
       </div>
     </div>
