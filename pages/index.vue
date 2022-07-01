@@ -1,9 +1,9 @@
 <template>
   <div
     class="h-screen w-screen grid place-items-center bg-center bg-cover overflow-auto my-lg"
-    style="background-image: url('/space-gradient.jpg');"
+    style="background-image: url('images/space-gradient.jpg');"
   >
-    <div class="card lg:card-side drop-shadow-2xl bg-gradient-to-r from-purple-800 via-purple-600 to-indigo-500">
+    <div class="card lg:card-side drop-shadow-2xl bg-gradient-to-r from-purple-600 via-purple-800 to-fuchsia-800">
       <div class="card-body max-w-sm mx-auto">
         <div class="text-white">
           <h2 class="card-title">IT-PM Tracker</h2>
@@ -49,6 +49,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: false
+})
+
 const model = ref({
   uname: '',
   pword: ''

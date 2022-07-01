@@ -5,6 +5,10 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/nuxt/'
   },
+  build: {
+    publicPath: '/nuxt/'
+  },
+  ssr: false,
   modules: [
     '@nuxtjs/tailwindcss'
   ],
