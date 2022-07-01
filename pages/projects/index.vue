@@ -1,13 +1,8 @@
 <template>
-  <NuxtLayout name="default">
-    <div>
-      this is the index
-    </div>
-  </NuxtLayout>
+  <div>
+    this is the index
+  </div>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: false
-})
 </script>

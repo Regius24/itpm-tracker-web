@@ -7,7 +7,7 @@
       <div class="card-body max-w-sm mx-auto">
         <div class="text-white">
           <h2 class="card-title">IT-PM Tracker</h2>
-          <p class="text-gray-300">Welcome, login your credentials below: {{ count }}</p>
+          <p class="text-gray-300">Welcome, login your credentials below:</p>
         </div>
 
         <form class="form-control my-5">
@@ -42,7 +42,11 @@
             class="btn btn-primary"
             @click="counterBtn"
           >Sign In</button>
+
+          <NuxtLink class="btn btn-primary" to="/posts">Posts</NuxtLink>
         </div>
+
+        counter: {{ incrementCounter }}
       </div>
     </div>
   </div>
@@ -59,6 +63,9 @@ const model = ref({
 })
 const showPassword = ref(false)
 
-const count = ref(0)
-const counterBtn = () => count.value++
+// const count = ref(0)
+const incrementCounter = useCounter()
+// const incrementCounter = useState('counter', () => 0)
+const counterBtn = () => incrementCounter.value++
+
 </script>

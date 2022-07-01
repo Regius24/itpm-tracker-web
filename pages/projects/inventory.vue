@@ -1,13 +1,8 @@
 <template>
-  <NuxtLayout name="default">
-    <div>
-      this is the inventory
-    </div>
-  </NuxtLayout>
+  <div>
+    this is the inventory
+  </div>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: false
-})
 </script>
