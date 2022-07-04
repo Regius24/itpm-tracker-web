@@ -28,8 +28,14 @@
       >ITPM Tracker</NuxtLink>
     </div>
 
-    <div class="flex-none">
+    <div class="flex-none mx-2">
       <div class="uppercase text-xl">admin</div>
+    </div>
+
+    <div class="flex-none">
+      <button class="btn btn-square btn-ghost">
+        <IconsCarbonUserData class="inline-block w-6 h-6" />
+      </button>
     </div>
 
     <div class="flex-none">

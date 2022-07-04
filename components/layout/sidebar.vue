@@ -19,9 +19,9 @@
         <NuxtLink to="/projects/inventory">Inventory</NuxtLink>
       </li>
 
-      <div class="divider"></div>
+      <div class="divider">Reports</div>
       <li>
-        <NuxtLink to="/reports">Reports</NuxtLink>
+        <NuxtLink to="/reports">Raw</NuxtLink>
       </li>
     </ul>
   </div>
