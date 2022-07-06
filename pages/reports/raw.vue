@@ -1,6 +1,6 @@
 <template>
   <div>
-    this is the reports index
+    this is the raw report
   </div>
 </template>
 

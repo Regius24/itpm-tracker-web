@@ -21,7 +21,15 @@
 
       <div class="divider">Reports</div>
       <li>
-        <NuxtLink to="/reports">Raw</NuxtLink>
+        <NuxtLink to="/reports/raw">Raw</NuxtLink>
+      </li>
+
+      <div class="divider">Others</div>
+      <li>
+        <NuxtLink to="/faqs">FAQs</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="http://10.122.8.236/esolve/Login" target="_blank">File a CR</NuxtLink>
       </li>
     </ul>
   </div>

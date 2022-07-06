@@ -12,6 +12,8 @@
     "tailwind-config-viewer": "^1.7.1"
   },
   "dependencies": {
-    "daisyui": "^2.17.0"
+    "chart.js": "^3.8.0",
+    "daisyui": "^2.17.0",
+    "vue-chartjs": "^4.1.1"
   }
 }
