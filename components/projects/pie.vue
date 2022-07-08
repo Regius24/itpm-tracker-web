@@ -1,9 +1,9 @@
 <template>
-  <div class="card bg-base-content shadow-xl">
-    <div class="card-body text-black">
-      <Doughnut
-        :chart-options="chartOptions"
+  <div class="card card-bg-color shadow-xl">
+    <div class="card-body text-white">
+      <Pie
         :chart-data="chartData"
+        :chart-options="chartOptions"
         :width="400"
         :height="400"
       />
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { Doughnut } from 'vue-chartjs'
+import { Pie } from 'vue-chartjs'
 import {
   Chart as ChartJS,
   Title,
@@ -25,6 +25,7 @@ import {
 } from 'chart.js'
 import ChartDataLabes from 'chartjs-plugin-datalabels'
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale, ChartDataLabes)
+ChartJS.defaults.color = '#FFF'
 
 const props = defineProps(['title', 'data'])
 
@@ -46,3 +47,9 @@ const chartData = {
   ]
 }
 </script>
+
+<style scoped>
+.card-bg-color {
+  background-color: #2a2a2a;
+}
+</style>

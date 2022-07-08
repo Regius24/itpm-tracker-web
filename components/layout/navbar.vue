@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-neutral shadow-lg">
+  <div class="navbar bg-base-100 sticky top-0 z-10 shadow-lg">
     <div class="flex-none">
       <label
         for="my-drawer"

@@ -3,7 +3,7 @@
     class="h-screen w-screen grid place-items-center bg-center bg-cover overflow-auto my-lg"
     style="background-image: url('images/space-gradient.jpg');"
   >
-    <div class="card lg:card-side drop-shadow-2xl bg-gradient-to-r from-purple-600 via-purple-800 to-fuchsia-800">
+    <div class="card lg:card-side drop-shadow-2xl rounded-xl bg-gradient-to-r from-gray-800 via-gray-800 to-gray-900">
       <div class="card-body max-w-sm mx-auto">
         <div class="text-white">
           <h2 class="card-title">IT-PM Tracker</h2>
@@ -18,7 +18,7 @@
             <input
               type="text"
               placeholder="Type here"
-              class="input input-bordered"
+              class="input input-bordered rounded-lg"
               :class="model.uname.length < 5 ? 'input-error' : ''"
               v-model="model.uname"
             />
@@ -31,7 +31,8 @@
             <input
               :type="showPassword ? 'text' : 'password'"
               placeholder="Type here"
-              class="input input-bordered"
+              class="input input-bordered rounded-lg"
+              :class="model.pword.length < 5 ? 'input-error' : ''"
               v-model="model.pword"
             />
           </div>
@@ -39,11 +40,14 @@
 
         <div class="card-actions justify-end">
           <button
-            class="btn btn-primary"
+            class="btn btn-primary rounded-lg"
             @click="counterBtn"
           >Sign In</button>
 
-          <NuxtLink class="btn btn-primary" to="/posts">Posts</NuxtLink>
+          <NuxtLink
+            class="btn btn-primary rounded-lg"
+            to="/posts"
+          >Posts</NuxtLink>
         </div>
 
         counter: {{ incrementCounter }}

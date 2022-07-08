@@ -17,6 +17,7 @@
     "daisyui": "^2.17.0",
     "devextreme": "22.1",
     "devextreme-vue": "22.1",
+    "lodash": "^4.17.21",
     "vue-chartjs": "^4.1.1"
   }
 }
