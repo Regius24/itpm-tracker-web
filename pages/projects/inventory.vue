@@ -2,7 +2,7 @@
   <ProjectsTable
     data="/sample-data.json"
     :columns="columns"
-    class="mb-5"
+    class="mb-5 p-3"
   />
 </template>
 
